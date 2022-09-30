@@ -11,13 +11,14 @@ Aqui ficará o código em React do protótipo de programa para o ensalamento no 
 
 Inicialmente, deve ser seguido as operações:
 
-1. ```git init```
-2. ```git remote add origin https://github.com/rmshimomura/Reserva-de-Salas.git```
-3. ```git pull origin master```
-4. ```git branch --set-upstream-to=origin/master master```
-5. ```git checkout -b development```
-6. ```git branch --set-upstream-to=origin/development development```
-7. ```git pull```
+1. Inicialize o repositório git: ```git init```
+2. Adicione o source: ```git remote add origin https://github.com/rmshimomura/Reserva-de-Salas.git```
+3. Baixe os arquivos na branch ```master``` do repositório remoto: ```git pull origin master```
+4. Setar fonte de atualizações da branch local para a branch remota: ```git branch --set-upstream-to=origin/master master```
+5. Criar nova branch de ```development```: ```git checkout -b development```
+6. Atulizar .git: ```git fetch```
+7. Setar fonte de atualizações da branch local para a branch remota: ```git branch --set-upstream-to=origin/development development```
+8. Baixe os arquivos remotos para o seu repositório local: ```git pull```
 
 ### Criação de novas funcionalidades:
 1. ```git checkout development```
@@ -25,9 +26,10 @@ Inicialmente, deve ser seguido as operações:
 3. ```git checkout -b <nome_da_funcionalidade>```
 4. ```git add <arquivos...>```
 5. ```git commit -m <mensagem...>```
-6. ```git push origin <nome_da_funcionalidade>```
+6. Após ter certeza do funcionamento da nova implementação faça: ```git push origin <nome_da_funcionalidade>```
+7. (Merge será feito posteriormente, como descrito nas observações importantes).
 
 ## Comandos importantes:
 
-1. ```git checkout <nome_da_branch>```
-2. ```git fetch```
+1. ```git checkout <nome_da_branch>```: Troca de branch
+2. ```git fetch```: Atualiza as referências para novas branches
