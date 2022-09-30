@@ -13,8 +13,8 @@ Inicialmente, deve ser seguido as operações:
 
 1. ```git init```
 2. ```git remote add origin https://github.com/rmshimomura/Reserva-de-Salas.git```
-3. ```git branch --set-upstream-to=origin/master master```
-4. ```git pull```
+3. ```git pull origin master```
+4. ```git branch --set-upstream-to=origin/master master```
 5. ```git checkout -b development```
 6. ```git branch --set-upstream-to=origin/development development```
 7. ```git pull```
