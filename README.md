@@ -12,19 +12,16 @@ Aqui ficará o código em React do protótipo de programa para o ensalamento no 
 Inicialmente, deve ser seguido as operações:
 
 1. ```git init```
-2. ```git remote add origin https://github.com/rmshimomura/Reserva-de-salas.git```
+2. ```git remote add origin https://github.com/rmshimomura/Reserva-de-Salas.git```
 3. ```git branch --set-upstream-to=origin/master master```
 4. ```git pull```
 5. ```git checkout -b development```
 6. ```git branch --set-upstream-to=origin/development development```
 7. ```git pull```
-8. ```git checkout -b hotfixes```
-9. ```git branch --set-upstream-to=origin/hotfixes hotfixes```
-10. ```git pull```
 
 ### Criação de novas funcionalidades:
 1. ```git checkout development```
-2. ```git pull origin development```
+2. ```git pull```
 3. ```git checkout -b <nome_da_funcionalidade>```
 4. ```git add <arquivos...>```
 5. ```git commit -m <mensagem...>```
