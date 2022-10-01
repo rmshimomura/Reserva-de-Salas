@@ -13,7 +13,7 @@ export default class Login extends Component {
 
     entrar = () => {
 
-        let user = DataBase.buscarUsername(this.state.login);
+        let user = DataBase.searchUsername(this.state.login);
 
         if (user != null) {
             if (user.hash === this.state.hash) {
@@ -49,6 +49,11 @@ export default class Login extends Component {
         }
     }
 
+    foo = () => {
+        DataBase.insertClassroom(this.state.login, this.state.hash, 30, "MDC-01", ["a", "b", "c"], "lab", ["z", "x", "y"])
+        console.log(DataBase.classroomsDB)
+    }
+
     render() {
 
         return (
@@ -56,7 +61,7 @@ export default class Login extends Component {
                 <Text style={styles.text}>Login</Text>
                 <TextInput style={styles.input} placeholder="Login" onChangeText={login => this.setState({ login })} />
                 <TextInput style={styles.input} placeholder="Senha" onChangeText={hash => this.setState({ hash })} />
-                <Button title="Entrar" onPress={this.entrar} />
+                <Button title="Entrar" onPress={this.foo} />
             </View>
         )
     }
