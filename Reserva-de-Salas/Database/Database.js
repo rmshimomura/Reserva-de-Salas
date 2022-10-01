@@ -11,10 +11,6 @@ export class DataBase {
         return this.loginDB.users.find((user) => user.name === nome);
     }
 
-    static create(Nome, Senha, Tipo){
-        this.loginDB.users.push({name: Nome, hash: Senha, access: Tipo});
-    }
-
 }
 
 // export default DataBase
