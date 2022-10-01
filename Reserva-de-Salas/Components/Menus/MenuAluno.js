@@ -6,9 +6,9 @@ export default function MenuAluno(props) {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Menu Aluno</Text>
-            <Button title="Consultar Sala" onPress={this.props.navigation.navigate('Consultar Sala')} />
-            <Button title="Fazer Requisição" onPress={this.props.navigation.navigate('Fazer Requisição')} />
-            <Button title="Minhas Requisições" onPress={this.props.navigation.navigate('Minhas Requisições')} />
+            <Button title="Consultar Sala" onPress={props.navigation.navigate('Consultar Sala')} />
+            <Button title="Fazer Requisição" onPress={props.navigation.navigate('Fazer Requisição')} />
+            <Button title="Minhas Requisições" onPress={props.navigation.navigate('Minhas Requisições')} />
             <Button title="Sair" onPress={() => props.navigation.navigate('Login')} />
         </View>
     )
