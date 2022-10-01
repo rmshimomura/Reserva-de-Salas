@@ -1,0 +1,74 @@
+{
+    "users": [
+        {
+            "name": "Rhuan",
+            "hash": "senha",
+            "access": 0
+        },
+        {
+            "name": "Rodrigo",
+            "hash": "senha",
+            "access": 0
+        },
+        {
+            "name": "Mateus",
+            "hash": "senha",
+            "access": 0
+        },
+        {
+            "name": "Matheus",
+            "hash": "senha",
+            "access": 0
+        },
+        {
+            "name": "Enzo",
+            "hash": "senha",
+            "access": 0
+        },
+        {
+            "name": "Felipe",
+            "hash": "senha",
+            "access": 0
+        },
+        {
+            "name": "Jandira",
+            "hash": "senha",
+            "access": 1
+        },
+        {
+            "name": "Sakuray",
+            "hash": "senha",
+            "access": 1
+        },
+        {
+            "name": "Wesley",
+            "hash": "senha",
+            "access": 1
+        },
+        {
+            "name": "Vitor",
+            "hash": "senha",
+            "access": 2
+        },
+        {
+            "name": "Coordenador",
+            "hash": "senha",
+            "access": 2
+        },
+        {
+            "name": "Isabel",
+            "hash": "senha",
+            "access": 3
+        },
+        {
+            "name": "Secretaria",
+            "hash": "senha",
+            "access": 3
+        },
+        {
+            "name": "Admin",
+            "hash": "senha",
+            "access": 4
+        }
+    ]
+}

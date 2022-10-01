@@ -17,15 +17,6 @@ export default function App() {
         <Stack.Screen name="Menu secretaria" options={{headerShown: false}}>
           {props => <MenuSecretaria {...props} />}
         </Stack.Screen>
-        {/* <Stack.Screen name="Menu professor">
-          {props => <MenuProfessor {...props} />}
-        </Stack.Screen>
-        <Stack.Screen name="Menu aluno">
-          {props => <MenuAluno {...props} />}
-        </Stack.Screen>
-        <Stack.Screen name="Menu coordenador">
-          {props => <MenuCoordenador {...props} />}
-        </Stack.Screen> */}
       </Stack.Navigator>
   </NavigationContainer>
   );
