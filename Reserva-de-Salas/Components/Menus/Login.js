@@ -1,12 +1,30 @@
 import react, { Component } from 'react'
-import TopBar from './Bars/TopBar';
 
 import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 
 export default class Login extends Component {
+
     state = {
         login: '',
         senha: ''
+    }
+
+    entrar = () => {
+
+        if (this.state.login == 'secretaria' && this.state.senha == '123') {
+            this.props.navigation.navigate('Menu secretaria')
+        } else if (this.state.login == 'professor' && this.state.senha == '123') {
+            this.props.navigation.navigate('Menu professor')
+        } else if (this.state.login == 'aluno' && this.state.senha == '123') {
+            this.props.navigation.navigate('Menu aluno')
+        } else if (this.state.login == 'coordenador' && this.state.senha == '123') {
+            this.props.navigation.navigate('Menu coordenador')
+        } else if (this.state.login == 'admin' && this.state.senha == 'admin') {
+            this.props.navigation.navigate('Menu admin')
+        } else {
+            Alert.alert('Login ou senha incorretos')
+            alert('Login ou senha incorretos')
+        }
     }
 
     render() {
@@ -41,5 +59,6 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#000',
         marginBottom: 10
-    }
+    },
+
 });
