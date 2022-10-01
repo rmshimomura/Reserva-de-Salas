@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function MenuSecretaria(props) {
 
-    return(
+    return (
         <View style={styles.container}>
             <Text style={styles.text}>Menu Secretaria</Text>
             <Button title="Agendar Sala" onPress={() => props.navigation.navigate('Cadastrar professor')} />

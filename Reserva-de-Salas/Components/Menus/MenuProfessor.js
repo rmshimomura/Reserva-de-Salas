@@ -6,10 +6,10 @@ export default function MenuProfessor(props) {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Menu Professor</Text>
-            <Button title="Consultar Sala" onPress={this.props.navigation.navigate('Consultar Sala')} />
-            <Button title="Fazer Requisição" onPress={this.props.navigation.navigate('Fazer Requisição')} />
-            <Button title="Minhas Requisições" onPress={this.props.navigation.navigate('Minhas Requisições')} />
-            <Button title="Libear Sala" onPress={this.props.navigation.navigate('Libear Sala')} />
+            <Button title="Consultar Sala" onPress={props.navigation.navigate('Consultar Sala')} />
+            <Button title="Fazer Requisição" onPress={props.navigation.navigate('Fazer Requisição')} />
+            <Button title="Minhas Requisições" onPress={props.navigation.navigate('Minhas Requisições')} />
+            <Button title="Libear Sala" onPress={props.navigation.navigate('Libear Sala')} />
             <Button title="Sair" onPress={() => props.navigation.navigate('Login')} />
         </View>
     )
