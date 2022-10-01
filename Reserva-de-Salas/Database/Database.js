@@ -24,9 +24,10 @@ export class DataBase {
         }
         
         this.classroomsDB.classrooms.push(classroom);
-
     }
 
-
+    static searchClassroom(name){
+        return this.classroomsDB.classrooms.find((classroom) => classroom.nome === name);
+    }
 
 }

@@ -50,8 +50,8 @@ export default class Login extends Component {
     }
 
     foo = () => {
-        DataBase.insertClassroom(this.state.login, this.state.hash, 30, "MDC-01", ["a", "b", "c"], "lab", ["z", "x", "y"])
-        console.log(DataBase.classroomsDB)
+        let classroom = DataBase.searchClassroom(this.state.login);
+        console.log(classroom);
     }
 
     render() {
