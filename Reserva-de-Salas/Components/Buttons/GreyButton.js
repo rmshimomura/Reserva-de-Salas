@@ -1,26 +1,29 @@
 import { React } from "react"
 import { StyleSheet } from "react-native"
 
-import './CustomButton'
+import CustomButton from './CustomButton'
 
-const BACKGROUND = '#333333'
+const BACKGROUND = '#D9D9D9'
 const FONT_SIZE = 20
-const FONT_COLOR = '#FFFFFF'
+const FONT_COLOR = '#000'
 const FONT_WEIGHT = 'bold'
 
-const GreyButton = ({text, onPress, style, textStyle}) => (
+const GreyButton = ({text, onPress, buttonStyle, textStyle,
+    width, height}) => (
 
     <CustomButton text={text} 
         onPress={onPress} 
-        buttonStyle={[style, styles.greyButtonStyle]} 
-        textStyle={textStyle} />
+        width={width}
+        height={height}
+        buttonStyle={[styles.greyButtonStyle, buttonStyle]} 
+        textStyle={[styles.greyButtonTextStyle, textStyle]} />
 )
 
 const styles = StyleSheet.create({
 
     greyButtonStyle: {
         backgroundColor: BACKGROUND,
-        borderRadius: 10,
+        borderRadius: 90,
         padding: 10
     },
     greyButtonTextStyle: {

@@ -1,5 +1,5 @@
 import react, { Component } from 'react'
-import TopBar from './Bars/TopBar';
+// import TopBar from './Bars/TopBar';
 
 import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 
