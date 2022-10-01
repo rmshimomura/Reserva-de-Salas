@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
-import Login from './Components/Login';
+import Login from './Components/Menus/Login';
 
 const Stack = createStackNavigator()
 
@@ -13,18 +13,18 @@ export default function App() {
         <Stack.Screen name="Login" options={{headerShown: false}}>
           {props => <Login {...props} />}
         </Stack.Screen>
-        {/* <AppNav.Screen name="Menu secretaria">
+        {/* <Stack.Screen name="Menu secretaria" options={{headerShown: false}}>
           {props => <MenuSecretaria {...props} />}
-        </AppNav.Screen>
-        <AppNav.Screen name="Menu professor">
+        </Stack.Screen>
+        <Stack.Screen name="Menu professor">
           {props => <MenuProfessor {...props} />}
-        </AppNav.Screen>
-        <AppNav.Screen name="Menu aluno">
+        </Stack.Screen>
+        <Stack.Screen name="Menu aluno">
           {props => <MenuAluno {...props} />}
-        </AppNav.Screen>
-        <AppNav.Screen name="Menu coordenador">
+        </Stack.Screen>
+        <Stack.Screen name="Menu coordenador">
           {props => <MenuCoordenador {...props} />}
-        </AppNav.Screen> */}
+        </Stack.Screen> */}
       </Stack.Navigator>
   </NavigationContainer>
   );
