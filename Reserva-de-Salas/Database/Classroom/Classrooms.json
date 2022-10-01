@@ -1,0 +1,33 @@
+{
+    "classrooms": [
+        {
+            "centro": "CCE",
+            "departamento": "DC",
+            "capacidade": 30,
+            "nome": "CCE-02",
+            "acessibilidade": [
+                "elevador", 
+                "banheiro adaptado"
+            ],
+            "tipo": "laboratorio",
+            "estrutura": [
+                "computadores",
+                "projetor"
+            ]
+        },
+        {
+            "centro": "CCE",
+            "departamento": "DC",
+            "capacidade": 20,
+            "nome": "MDC-01",
+            "acessibilidade": [
+                "elevador"
+            ],
+            "tipo": "laboratorio",
+            "estrutura": [
+                "computadores",
+                "lousa branca"
+            ]
+        }
+    ]
+}
