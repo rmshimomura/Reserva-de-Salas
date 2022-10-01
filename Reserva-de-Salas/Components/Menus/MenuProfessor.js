@@ -1,7 +1,7 @@
 import react from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-export default function MenuAluno(props) {
+export default function MenuProfessor(props) {
 
     return (
         <View style={styles.container}>
