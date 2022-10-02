@@ -10,8 +10,8 @@ const FONT_SIZE = 40
 const FONT_WEIGHT = 'regular'
 
 const ReturnButton = (display) => {
-    
-    return display ? (
+
+    return display.display ? (
             <TouchableHighlight style={styles.returnButton}
                 onPress={() => navigation.goBack()}>
                 <View style={styles.iconContainer}>
@@ -26,7 +26,7 @@ const ReturnButton = (display) => {
 
 const NotificationButton = (display) => {
     
-    return display ? (
+    return display.display ? (
         <TouchableHighlight style={styles.notificationsButton}
             onPress={() => {}}>
             <View style={styles.iconContainer}>
