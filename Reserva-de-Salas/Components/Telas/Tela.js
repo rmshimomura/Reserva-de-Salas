@@ -16,7 +16,7 @@ const ReturnButton = (display) => {
                 onPress={() => navigation.goBack()}>
                 <View style={styles.iconContainer}>
                     <Icon name='arrow-left-l' 
-                        size={30} 
+                        size={50} 
                         color={'black'} />
                 </View>
             </TouchableHighlight>
@@ -31,7 +31,7 @@ const NotificationButton = (display) => {
             onPress={() => {}}>
             <View style={styles.iconContainer}>
                 <Icon name='bell-alt' 
-                    size={30} 
+                    size={50} 
                     color={'goldenrod'} />
             </View>
         </TouchableHighlight>
@@ -94,9 +94,9 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
     },
     returnButton: {
-        margin: 8,
-        height: 40,
-        width: 40,
+        margin: 25,
+        height: 70,
+        width: 70,
         backgroundColor: 'transparent',
         underlayColor: '#fff',
         borderRadius: 10,
@@ -110,9 +110,9 @@ const styles = StyleSheet.create({
         shadowOffset: {width: 0, height: 0}
     },
     notificationsButton: {
-        margin: 8,
-        height: 40,
-        width: 40,
+        margin: 25,
+        height: 70,
+        width: 70,
         backgroundColor: '#cccccc',
         underlayColor: '#fff',
         borderRadius: 10,
