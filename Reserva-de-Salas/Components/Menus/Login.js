@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 
 import { DataBase } from '../../Database/Database'
 
-import  Tela  from '../Telas/Tela'
+import Tela from '../Telas/Tela'
 
 export default class Login extends Component {
 
@@ -49,7 +49,7 @@ export default class Login extends Component {
     render() {
 
         return (
-                <Tela name="LOGIN">
+                <Tela name="LOGIN" returnBtn={true} notificationBtn={true}>
                     <View style={styles.container}>
                         <TextInput style={styles.input} placeholder="Login" onChangeText={login => this.setState({ login })} />
                         <TextInput secureTextEntry style={styles.input} placeholder="Senha" onChangeText={hash => this.setState({ hash })} />
