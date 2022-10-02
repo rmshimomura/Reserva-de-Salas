@@ -1,24 +1,50 @@
-import react from 'react'
+import react, { Component } from 'react'
 import { StyleSheet, Text, View, Buttonm, TextInput } from 'react-native';
 import Tela from '../Telas/Tela'
 
 import GreyButton from '../Buttons/GreyButton'
 import GreenButton from '../Buttons/GreenButton'
 
-export default function TelaConsultarSala(props) {
+export default class TelaConsultarSala extends Component {
 
-    return (
-        <Tela name="Consultar Sala" returnBtn="true">
-            <View style={styles.container}>
-                <Text style={styles.text}>Sala:</Text>
-                <View style={styles.rowView}>
-                    <TextInput secureTextEntry style={styles.input} placeholder="Digite o nome da sala..." onChangeText={hash => this.setState({ hash })} />
-                    <GreenButton height="4.5%" width="10%" text="Consultar" onPress={{/*props.navigation.navigate('Consultar Sala')*/ }} />
+
+    state = {
+        classroom : -1,
+    }
+    
+    changeClassoomStatus() {
+        this.setState({classroom : 0})
+    }
+    
+    error() {
+        if(this.state.classroom === 0){
+            return (
+                <View style={styles.container}>
+                    <Text style={styles.text}> kkkkkkk </Text>
                 </View>
-                
-             </View>
-        </Tela>
-    )
+            )
+        }
+
+        return null
+    }
+
+    render () {
+
+        return (
+            <Tela name="Consultar Sala" returnBtn="true">
+                <View style={styles.container}>
+                    <Text style={styles.text}>Sala:</Text>
+                    <View style={styles.rowView}>
+                        <TextInput secureTextEntry style={styles.input} placeholder="Digite o nome da sala..." onChangeText={hash => this.setState({ hash })} />
+                        <GreenButton height="4.5%" width="10%" text="Consultar" onPress={() => this.changeClassoomStatus()} />
+                    </View>
+                    <View>
+                        {this.error()}
+                    </View>
+                 </View>
+            </Tela>
+        )
+    }
 }
 
 const styles = StyleSheet.create({
