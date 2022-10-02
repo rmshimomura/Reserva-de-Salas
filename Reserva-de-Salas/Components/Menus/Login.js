@@ -6,8 +6,6 @@ import { DataBase } from '../../Database/Database'
 
 import  Tela  from '../Telas/Tela'
 
-import CadastrarSala from '../Telas/CadastrarSala';
-
 export default class Login extends Component {
 
     state = {
@@ -51,9 +49,13 @@ export default class Login extends Component {
     render() {
 
         return (
-            <CadastrarSala>
-
-            </CadastrarSala>
+                <Tela name="LOGIN">
+                    <View style={styles.container}>
+                        <TextInput style={styles.input} placeholder="Login" onChangeText={login => this.setState({ login })} />
+                        <TextInput secureTextEntry style={styles.input} placeholder="Senha" onChangeText={hash => this.setState({ hash })} />
+                        <Button title="Entrar" onPress={this.entrar} />
+                    </View>
+                </Tela>
         );
     }
     
