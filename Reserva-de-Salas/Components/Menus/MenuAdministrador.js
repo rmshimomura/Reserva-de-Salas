@@ -1,5 +1,6 @@
 import react, { Component } from 'react'
-
+import Tela from '../Telas/Tela';
+import GreyButton from '../Buttons/GreyButton';
 import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 
 export default class MenuAdministrador extends Component {
@@ -7,12 +8,13 @@ export default class MenuAdministrador extends Component {
     render() {
 
         return (
-            <View style={styles.container}>
-                <Text style={styles.text}>MENU ADMINISTRADOR</Text>
-                <Button title="Alterar permissões e informações de um usuário"/>
-                <Button title="Log de eventos"/>
-            </View>
-        )
+            <Tela name="Menu Administrador">
+                <View style={styles.container}>
+                    <GreyButton width={1300} height={80} buttonStyle={{marginBottom: 43}} text="Alterar permissões e informações de um usuário"/>
+                    <GreyButton width={1300} height={80} buttonStyle={{marginBottom: 43}} text="Log de eventos"/>
+                </View>
+            </Tela>
+        );
     }
 
 }
