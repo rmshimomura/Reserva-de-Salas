@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: BACKGROUND,
-        padding: 10,
+        paddingTop: 38,
         justifyContent: 'start',
         alignItems: 'center'
     },
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         height: 100,
         padding: 8,
         flexDirection: 'row',
-        width: '100%',
+        width: 1300,
         backgroundColor: TOPTAB_COLOR,
         justifyContent: 'start',
         alignItems: 'center',

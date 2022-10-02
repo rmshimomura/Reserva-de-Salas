@@ -65,20 +65,24 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        alignItems: 'center',
+        width: 725,
+        alignItems: 'left',
         justifyContent: 'center',
     },
     text: {
-        fontSize: 30,
-        fontWeight: 'bold',
-        marginBottom: 20
+        fontSize: 40,
+        // marginBottom: 20,
     },
     input: {
-        width: 300,
-        height: 40,
+        width: 725,
+        height: 67,
         borderWidth: 1,
         borderColor: '#000',
-        marginBottom: 10
+        marginBottom: 10,
+        padding: 10,
+        fontSize: 24,
+        fontWeight: 'normal',
+        color: '#A1A1A1'
     },
 
 });
