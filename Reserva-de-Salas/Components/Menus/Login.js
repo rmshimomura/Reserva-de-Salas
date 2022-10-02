@@ -5,6 +5,7 @@ import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 import { DataBase } from '../../Database/Database'
 
 import  Tela  from '../Telas/Tela'
+import GreyButton from '../Buttons/GreyButton'
 
 export default class Login extends Component {
 
@@ -49,13 +50,15 @@ export default class Login extends Component {
     render() {
 
         return (
-                <Tela name="LOGIN">
-                    <View style={styles.container}>
-                        <TextInput style={styles.input} placeholder="Login" onChangeText={login => this.setState({ login })} />
-                        <TextInput secureTextEntry style={styles.input} placeholder="Senha" onChangeText={hash => this.setState({ hash })} />
-                        <Button title="Entrar" onPress={this.entrar} />
-                    </View>
-                </Tela>
+            <Tela name="SISTEMA PARA RESERVA DE SALAS">
+                <View style={styles.container}>
+                    <Text style={styles.text}>Usuário:</Text>
+                    <TextInput style={styles.input} placeholder="Digite seu usuário ou email..." onChangeText={login => this.setState({ login })} />
+                    <Text style={styles.text}>Senha:</Text>
+                    <TextInput secureTextEntry style={styles.input} placeholder="Digite sua senha aqui..." onChangeText={hash => this.setState({ hash })} />
+                </View>
+                <GreyButton text="Entrar" width={300} height={80} buttonStyle={{ position: 'relative'}} onPress={this.entrar} />
+            </Tela>
         );
     }
     
@@ -65,20 +68,24 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        alignItems: 'center',
+        width: 725,
+        alignItems: 'left',
         justifyContent: 'center',
     },
     text: {
-        fontSize: 30,
-        fontWeight: 'bold',
-        marginBottom: 20
+        fontSize: 40,
+        // marginBottom: 20,
     },
     input: {
-        width: 300,
-        height: 40,
+        width: 725,
+        height: 67,
         borderWidth: 1,
         borderColor: '#000',
-        marginBottom: 10
+        marginBottom: 10,
+        padding: 10,
+        fontSize: 24,
+        fontWeight: 'normal',
+        color: '#A1A1A1'
     },
 
 });
