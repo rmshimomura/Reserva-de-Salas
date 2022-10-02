@@ -6,6 +6,8 @@ import { DataBase } from '../../Database/Database'
 
 import Tela from '../Telas/Tela'
 
+import GreyButton from '../Buttons/GreyButton'
+
 export default class Login extends Component {
 
     state = {
@@ -49,7 +51,7 @@ export default class Login extends Component {
     render() {
 
         return (
-            <Tela name="SISTEMA PARA RESERVA DE SALAS">
+            <Tela name="SISTEMA PARA RESERVA DE SALAS" returnBtn={false} notificationBtn={false}>
                 <View style={styles.container}>
                     <Text style={styles.text}>Usuário:</Text>
                     <TextInput style={styles.input} placeholder="Digite seu usuário ou email..." onChangeText={login => this.setState({ login })} />
@@ -68,12 +70,12 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         width: 725,
+        height: 300,
         alignItems: 'left',
         justifyContent: 'center',
     },
     text: {
         fontSize: 40,
-        // marginBottom: 20,
     },
     input: {
         width: 725,
