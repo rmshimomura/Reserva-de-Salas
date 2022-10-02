@@ -19,24 +19,19 @@ export default class Login extends Component {
             if (user.hash === this.state.hash) {
                 switch (user.access) {
                     case 0:
-                        console.log('Aluno');
-                        // this.props.navigation.navigate('Menu aluno')
+                        this.props.navigation.navigate('Menu aluno')
                         break;
                     case 1:
-                        console.log('Professor');
-                        // this.props.navigation.navigate('Menu professor')
+                        this.props.navigation.navigate('Menu professor')
                         break;
                     case 2:
-                        console.log('Coordenador');
-                        // this.props.navigation.navigate('Menu coordenador')
+                        this.props.navigation.navigate('Menu coordenador')
                         break;
                     case 3:
-                        console.log('Secretaria');
-                        // this.props.navigation.navigate('Menu secretaria')
+                        this.props.navigation.navigate('Menu secretaria')
                         break;
                     case 4:
-                        console.log('Admin');
-                        // this.props.navigation.navigate('Menu admin')
+                        this.props.navigation.navigate('Menu admin')
                         break;
                 }
             } else {
