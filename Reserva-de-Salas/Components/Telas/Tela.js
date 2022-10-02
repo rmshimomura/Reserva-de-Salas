@@ -8,49 +8,48 @@ const TEXT_COLOR = '#000000'
 const FONT_SIZE = 20
 const FONT_WEIGHT = 'regular'
 
-function Tela(props) {
+const ReturnButton = (display) => {
+    if(display === true){
+        return (
+            <TouchableHighlight style={styles.returnButton}
+                onPress={() => navigation.goBack()}>
+                <View style={{ flex: 1 }}>
+                    <Text>
+                        +
+                    </Text>
+                </View>
+            </TouchableHighlight>
+        )
+    }
+    return null
+}
+
+const NotificationButton = (display) => {
+    if(display === true){
+        return (
+            <TouchableHighlight style={styles.returnButton}
+                onPress={() => alert('Notificações')}>
+                <View style={{ flex: 1 }}>
+                    <Text>
+                        -
+                    </Text>
+                </View>
+            </TouchableHighlight>
+        )
+    }
+    return null
+}
+
+const Tela = (props) => {
 
     const navigation = useNavigation();
-
-    function returnBtn() {
-        if(props.returnBtn == true){
-            return (
-                <TouchableHighlight style={styles.returnButton}
-                    onPress={() => navigation.goBack()}>
-                    <View style={{ flex: 1 }}>
-                        <Text>
-                            +
-                        </Text>
-                    </View>
-                </TouchableHighlight>
-            )
-        }
-
-        return null
-    }
-
-    function notificationBtn() {
-        if(props.notificationBtn == true){
-            return (
-                <TouchableHighlight style={styles.returnButton}
-                    onPress={() => alert('Notificações')}>
-                    <View style={{ flex: 1 }}>
-                        <Text>
-                            -
-                        </Text>
-                    </View>
-                </TouchableHighlight>
-            )
-        }
-
-        return null
-    }
 
     return (
         <View style={styles.container}>
             <View style={styles.topBar}>
                 <View>
-                    {returnBtn()}
+                    <ReturnButton 
+                        display={props.returnBtn}/>
                 </View>
                 <View style={{ flex: 1 }}>
                     <Text style={styles.text}>
@@ -58,7 +57,8 @@ function Tela(props) {
                     </Text>
                 </View>
                 <View>
-                    {notificationBtn()}
+                    <NotificationButton 
+                        display={props.notificationBtn}/>
                 </View>
             </View>
             {props.children}
