@@ -1,43 +1,46 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableHighlight } 
-    from 'react-native'
-// import {  }
+import { View, Text, StyleSheet, TouchableHighlight } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 
-const BACKGROUND = '#F5F5F5'
+const BACKGROUND = '#FFFFFF'
 const TOPTAB_COLOR = '#82C57C'
 const TEXT_COLOR = '#000000'
 const FONT_SIZE = 20
 const FONT_WEIGHT = 'regular'
 
-const Tela = (props) => (
+function Tela(props) {
 
-    <View style={styles.container}>
-        <View style={styles.topBar}>
-            <TouchableHighlight style={styles.returnButton}
-                onPress={() => alert('Voltar')}>
-                    <View style={{flex: 1}}>
+    const navigation = useNavigation();
+
+    return (
+        <View style={styles.container}>
+            <View style={styles.topBar}>
+                <TouchableHighlight style={styles.returnButton}
+                    onPress={() => navigation.goBack()}>
+                    <View style={{ flex: 1 }}>
                         <Text>
                             +
                         </Text>
                     </View>
-            </TouchableHighlight>
-            <View style={{flex: 1}}>
-                <Text style={styles.text}>
-                    {props.name}
-                </Text>
-            </View>
-            <TouchableHighlight style={styles.returnButton}
-                onPress={() => alert('Notificações')}>
-                    <View style={{flex: 1}}>
+                </TouchableHighlight>
+                <View style={{ flex: 1 }}>
+                    <Text style={styles.text}>
+                        {props.name}
+                    </Text>
+                </View>
+                <TouchableHighlight style={styles.returnButton}
+                    onPress={() => alert('Notificações')}>
+                    <View style={{ flex: 1 }}>
                         <Text>
                             -
                         </Text>
                     </View>
-            </TouchableHighlight>
+                </TouchableHighlight>
+            </View>
+            {props.children}
         </View>
-        {props.children}
-    </View>
-)
+    )
+}
 
 const styles = StyleSheet.create({
     container: {
