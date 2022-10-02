@@ -1,0 +1,52 @@
+{
+    "centros": [
+        {
+            "centro": "CCH",
+            "departamentos": [
+                "DAD", "DAH", "DCM", "DCS", "DEE", "DED", "DGE", "DHI", "DLA", "DPE", "DPD"
+            ]
+        },
+        {
+            "centro": "CCB",
+            "departamentos": [
+                "BEG", "BOT", "BQA", "CFS", "ECZ", "FMC", "MIP", "MOR"
+            ]
+        },
+        {
+            "centro": "CCE",
+            "departamentos": [
+                "DBB", "DC", "DE", "DF", "DG", "DGG", "DM", "DQ"
+            ]
+        },
+        {
+            "centro": "CESA",
+            "departamentos": [
+                "DCC", "DCE", "DDPu", "DDPr", "DA", "DSE", "DSS"
+            ]
+        },
+        {
+            "centro": "CECA",
+            "departamentos": [
+                "AV", "CI", "Com", "Des", "Ed", "MT"
+            ]
+        },
+        {
+            "centro": "CCA",
+            "departamentos": [
+                "DA", "DCV", "DMVP", "DCTA", "DZ"
+            ]
+        },
+        {
+            "centro": "CTU",
+            "departamentos": [
+                "AU", "EE", "CC", "Est"
+            ]
+        },
+        {
+            "centro": "CEFE",
+            "departamentos": [
+                "EMH", "CE", "EF"
+            ]
+        }
+    ]
+}
