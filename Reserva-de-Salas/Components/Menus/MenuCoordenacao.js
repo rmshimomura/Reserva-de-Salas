@@ -8,7 +8,7 @@ import GreenButton from '../Buttons/GreenButton'
 export default function MenuCoordenacao(props) {
 
     return (
-        <Tela name="Menu coordenação">
+        <Tela name="Menu coordenação" returnBtn={true} notificationBtn={true}>
             <View style={styles.container}>
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Agendar Sala" onPress={{/*props.navigation.navigate('Agendar Sala')*/}} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Consultar Sala" onPress={props.navigation.navigate('Consultar Sala')} />

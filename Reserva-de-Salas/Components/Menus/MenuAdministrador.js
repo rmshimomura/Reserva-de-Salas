@@ -8,10 +8,10 @@ export default class MenuAdministrador extends Component {
     render() {
 
         return (
-            <Tela name="Menu Administrador">
+            <Tela name="Menu Administrador" returnBtn={true} notificationBtn={true}>
                 <View style={styles.container}>
-                    <GreyButton width={1300} height={80} buttonStyle={{marginBottom: 43}} text="Alterar permissões e informações de um usuário"/>
-                    <GreyButton width={1300} height={80} buttonStyle={{marginBottom: 43}} text="Log de eventos"/>
+                    <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Alterar permissões e informações de um usuário"/>
+                    <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Log de eventos"/>
                 </View>
             </Tela>
         );
@@ -25,18 +25,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+        width: "90%"
     },
     text: {
         fontSize: 30,
         fontWeight: 'bold',
         marginBottom: 20
     },
-    input: {
-        width: 300,
-        height: 40,
-        borderWidth: 1,
-        borderColor: '#000',
-        marginBottom: 10
+    button: {
+        marginBottom: 43,
     },
 
 });
