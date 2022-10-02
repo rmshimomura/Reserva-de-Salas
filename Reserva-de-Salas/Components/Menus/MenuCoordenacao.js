@@ -11,7 +11,7 @@ export default function MenuCoordenacao(props) {
         <Tela name="Menu coordenação">
             <View style={styles.container}>
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Agendar Sala" onPress={{/*props.navigation.navigate('Agendar Sala')*/}} />
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Consultar Sala" onPress={props.navigation.navigate('Consultar Sala')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Consultar Sala" onPress={() => props.navigation.navigate('Consultar Sala')} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Fazer requisição" onPress={{/*props.navigation.navigate('Fazer requisição')*/}} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Procurar um(a) professor(a)" onPress={{/*props.navigation.navigate('Procurar um(a) professor(a)')*/}} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Sair" onPress={() => props.navigation.navigate("Login")} />
