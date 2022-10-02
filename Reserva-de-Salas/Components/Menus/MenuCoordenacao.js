@@ -1,17 +1,22 @@
 import react from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native';
+import Tela from '../Telas/Tela'
+
+import GreyButton from '../Buttons/GreyButton'
+import GreenButton from '../Buttons/GreenButton'
 
 export default function MenuCoordenacao(props) {
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Menu Professor</Text>
-            <Button title="Agendar Sala" onPress={ props.navigation.navigate('Agendar Sala')} />
-            <Button title="Consultar Sala" onPress={ props.navigation.navigate('Consultar Sala')} />
-            <Button title="Fazer requisição" onPress={ props.navigation.navigate('Fazer requisição')} />
-            <Button title="Procurar um(a) professor(a)" onPress={ props.navigation.navigate('Procurar um(a) professor(a)')} />
-            <Button title="Sair" onPress={() => props.navigation.navigate('Login')} />
-        </View>
+        <Tela name="Menu coordenação">
+            <View style={styles.container}>
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Agendar Sala" onPress={{/*props.navigation.navigate('Agendar Sala')*/}} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Consultar Sala" onPress={props.navigation.navigate('Consultar Sala')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Fazer requisição" onPress={{/*props.navigation.navigate('Fazer requisição')*/}} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Procurar um(a) professor(a)" onPress={{/*props.navigation.navigate('Procurar um(a) professor(a)')*/}} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Sair" onPress={() => props.navigation.navigate("Login")} />
+            </View>
+        </Tela>
     )
 }
 
@@ -21,10 +26,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+        width: "90%"
     },
     text: {
         fontSize: 30,
         fontWeight: 'bold',
         marginBottom: 20
+    },
+    button: {
+        marginBottom: 43,
     },
 });
