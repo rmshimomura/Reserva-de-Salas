@@ -12,9 +12,9 @@ function Tela(props) {
 
     const navigation = useNavigation();
 
-    return (
-        <View style={styles.container}>
-            <View style={styles.topBar}>
+    function returnBtn() {
+        if(props.returnBtn == true){
+            return (
                 <TouchableHighlight style={styles.returnButton}
                     onPress={() => navigation.goBack()}>
                     <View style={{ flex: 1 }}>
@@ -23,11 +23,15 @@ function Tela(props) {
                         </Text>
                     </View>
                 </TouchableHighlight>
-                <View style={{ flex: 1 }}>
-                    <Text style={styles.text}>
-                        {props.name}
-                    </Text>
-                </View>
+            )
+        }
+
+        return null
+    }
+
+    function notificationBtn() {
+        if(props.notificationBtn == true){
+            return (
                 <TouchableHighlight style={styles.returnButton}
                     onPress={() => alert('Notificações')}>
                     <View style={{ flex: 1 }}>
@@ -36,6 +40,26 @@ function Tela(props) {
                         </Text>
                     </View>
                 </TouchableHighlight>
+            )
+        }
+
+        return null
+    }
+
+    return (
+        <View style={styles.container}>
+            <View style={styles.topBar}>
+                <View>
+                    {returnBtn()}
+                </View>
+                <View style={{ flex: 1 }}>
+                    <Text style={styles.text}>
+                        {props.name}
+                    </Text>
+                </View>
+                <View>
+                    {notificationBtn()}
+                </View>
             </View>
             {props.children}
         </View>
