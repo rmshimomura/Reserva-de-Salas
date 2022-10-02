@@ -8,7 +8,7 @@ import GreenButton from '../Buttons/GreenButton'
 export default function MenuSecretaria(props) {
 
     return (
-        <Tela name="Menu secretaria">
+        <Tela name="Menu secretaria" returnBtn={true} notificationBtn={true}>
             <View style={styles.container}>
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Agendar Sala" onPress={() => props.navigation.navigate('Cadastrar professor')} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Cadastrar Sala" onPress={() => props.navigation.navigate('Cadastrar aluno')} />
