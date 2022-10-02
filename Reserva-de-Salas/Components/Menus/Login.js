@@ -40,7 +40,7 @@ export default class Login extends Component {
                 Alert.alert('Senha incorreta')
                 alert('Senha incorreta')
             }
-        }else {
+        } else {
             Alert.alert('Usuário não encontrado')
             alert('Usuário não encontrado')
         }
@@ -49,16 +49,18 @@ export default class Login extends Component {
     render() {
 
         return (
-                <Tela name="LOGIN" returnBtn={true} notificationBtn={true}>
-                    <View style={styles.container}>
-                        <TextInput style={styles.input} placeholder="Login" onChangeText={login => this.setState({ login })} />
-                        <TextInput secureTextEntry style={styles.input} placeholder="Senha" onChangeText={hash => this.setState({ hash })} />
-                        <Button title="Entrar" onPress={this.entrar} />
-                    </View>
-                </Tela>
+            <Tela name="SISTEMA PARA RESERVA DE SALAS">
+                <View style={styles.container}>
+                    <Text style={styles.text}>Usuário:</Text>
+                    <TextInput style={styles.input} placeholder="Digite seu usuário ou email..." onChangeText={login => this.setState({ login })} />
+                    <Text style={styles.text}>Senha:</Text>
+                    <TextInput secureTextEntry style={styles.input} placeholder="Digite sua senha aqui..." onChangeText={hash => this.setState({ hash })} />
+                </View>
+                <GreyButton text="Entrar" width={300} height={80} buttonStyle={{ position: 'relative' }} onPress={this.entrar} />
+            </Tela>
         );
     }
-    
+
 }
 
 const styles = StyleSheet.create({
