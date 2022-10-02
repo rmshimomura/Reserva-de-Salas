@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 
 import { DataBase } from '../../Database/Database'
 
-import  Tela  from '../Telas/Tela'
+import Tela from '../Telas/Tela'
 
 export default class Login extends Component {
 

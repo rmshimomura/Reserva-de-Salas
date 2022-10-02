@@ -27,7 +27,7 @@ const ReturnButton = (display) => {
 const NotificationButton = (display) => {
     if(display === true){
         return (
-            <TouchableHighlight style={styles.returnButton}
+            <TouchableHighlight style={styles.notificationButton}
                 onPress={() => alert('Notificações')}>
                 <View style={{ flex: 1 }}>
                     <Text>
@@ -83,6 +83,10 @@ const styles = StyleSheet.create({
         justifyContent: 'start',
         alignItems: 'center',
         borderRadius: 45,
+        shadowOpacity: 0.4,
+        shadowRadius: 5,
+        shadowColor: '#000000',
+        shadowOffset: {width: 0, height: 0}
     },
     text: {
         color: TEXT_COLOR,
@@ -94,7 +98,30 @@ const styles = StyleSheet.create({
         margin: 8,
         height: 30,
         width: 30,
-        backgroundColor: '#ff0000'
+        backgroundColor: 'transparent',
+        activeOpacity: 0.5,
+        borderColor: '#000',
+        borderWidth: 1,
+        // alignSelf: 'center',
+        // shadowOpacity: 0.4,
+        // shadowRadius: 5,
+        // shadowColor: '#000000',
+        // shadowOffset: {width: 0, height: 0}
+    },
+    notificationButton: {
+        margin: 8,
+        height: 30,
+        width: 30,
+        backgroundColor: '#cccccc',
+        borderRadius: 20,
+        activeOpacity: 0.5,
+        borderColor: '#000',
+        borderWidth: 1,
+        // alignSelf: 'center',
+        // shadowOpacity: 0.4,
+        // shadowRadius: 5,
+        // shadowColor: '#000000',
+        // shadowOffset: {width: 0, height: 0}
     }
 })
 
