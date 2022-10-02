@@ -9,7 +9,7 @@ export class DataBase {
     constructor(){}
 
     static searchUsername(name){
-        return this.loginDB.users.find((user) => user.name === nome);
+        return this.loginDB.users.find((user) => user.name === name);
     }
 
     static insertClassroom(Centro, Depto, Cap, Nome, Acess, Tipo, Est) { 
