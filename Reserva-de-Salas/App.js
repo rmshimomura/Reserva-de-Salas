@@ -9,7 +9,7 @@ import MenuAluno from './Components/Menus/MenuAluno';
 import MenuCoordenacao from './Components/Menus/MenuCoordenacao';
 import MenuAdministrador from './Components/Menus/MenuAdministrador';
 import CadastrarSala from './Components/Telas/CadastrarSala';
-
+import TelaConsultarSala from './Components/Telas/TelaConsultarSala';
 const Stack = createStackNavigator()
 
 export default function App() {
@@ -36,6 +36,9 @@ export default function App() {
         </Stack.Screen>
         <Stack.Screen name="Cadastrar sala" options={{headerShown: false}}>
           {props => <CadastrarSala {...props} />}
+        </Stack.Screen>
+        <Stack.Screen name="Consultar Sala" options={{headerShown: false}}>
+          {props => <TelaConsultarSala {...props} />}
         </Stack.Screen>
       </Stack.Navigator>
   </NavigationContainer>
