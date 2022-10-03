@@ -65,7 +65,7 @@ export default class TelaConsultarSala extends Component {
     render () {
 
         return (
-            <Tela name="Consultar Sala" returnBtn="true">
+            <Tela name="Consultar Sala" returnBtn="true" notificationBtn="true">
                 <View style={styles.container}>
                     <Text style={styles.text}>Sala:</Text>
                     <View style={styles.rowView}>
