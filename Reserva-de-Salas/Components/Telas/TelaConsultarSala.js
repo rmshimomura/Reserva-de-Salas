@@ -41,18 +41,18 @@ export default class TelaConsultarSala extends Component {
         if(this.state.classroom === 1){
             return (
                 <View>
-                    <View style={{flex: 2, backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "10%"}}>
+                    <View style={{flex: 2, backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "4%"}}>
                         <Text style={styles.text} >Sala: {this.state.classroomJSON.nome}</Text>
                         <Text style={styles.text} >Capacidade: {this.state.classroomJSON.capacidade}</Text>
                         <GreenButton height="50%" width="20%" text="Editar" onPress={() => alert('Ainda não implementado!')} />
                     </View>
-                    <View style={{backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "10%"}}>
+                    <View style={{backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "4%"}}>
                         <Text style={styles.text} >Centro: {this.state.classroomJSON.centro}</Text>
                     </View>
-                    <View style={{backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "10%"}}>
+                    <View style={{backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "4%"}}>
                         <Text style={styles.text} >Equipamentos: {this.state.classroomJSON.estrutura + "."}</Text>
                     </View>
-                    <View style={{backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "10%"}}>
+                    <View style={{backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "4%"}}>
                         <Text style={styles.text} >Localização: UEL</Text>
                     </View>
                 </View>
