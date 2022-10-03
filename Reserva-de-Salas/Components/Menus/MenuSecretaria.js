@@ -10,11 +10,10 @@ export default function MenuSecretaria(props) {
     return (
         <Tela name="Menu secretaria" returnBtn={true} notificationBtn={true}>
             <View style={styles.container}>
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Agendar Sala" onPress={() => props.navigation.navigate('Cadastrar professor')} />
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Cadastrar Sala" onPress={() => props.navigation.navigate('Cadastrar aluno')} />
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Consultar sala" onPress={() => props.navigation.navigate('Cadastrar sala')} />
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Requisições pendentes" onPress={() => props.navigation.navigate('Cadastrar sala')} />
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Sair" onPress={() => props.navigation.navigate('Login')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Agendar Sala" onPress={() => alert('Ainda não implementado!')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Cadastrar Sala" onPress={() => props.navigation.navigate('Cadastrar sala')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Consultar sala" onPress={() => props.navigation.navigate('Consultar sala')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Requisições pendentes" onPress={() => alert('Ainda não implementado!')} />
             </View>
         </Tela>
     )
