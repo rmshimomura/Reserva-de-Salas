@@ -9,9 +9,9 @@ export default function MenuProfessor(props) {
         <Tela name="Menu Professor" returnBtn={true} notificationBtn={true}>
             <View style={styles.container}>
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Consultar Sala" onPress={() => props.navigation.navigate('Consultar Sala')} />
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Fazer Requisição" onPress={alert('Ainda não implementado!')}/>
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Minhas Requisições"onPress={alert('Ainda não implementado!')}/>
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Libear Sala" onPress={alert('Ainda não implementado!')}/>
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Fazer Requisição" onPress={() =>  alert('Ainda não implementado!')}/>
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Minhas Requisições"onPress={() => alert('Ainda não implementado!')}/>
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Libear Sala" onPress={() => alert('Ainda não implementado!')}/>
             </View>
         </Tela>
     )
