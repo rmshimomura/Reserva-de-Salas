@@ -1,10 +1,8 @@
 import react, { Component } from 'react'
 import { View, Text, StyleSheet, TouchableHighlight, TextInput, Picker} from 'react-native'
-import { useNavigation } from '@react-navigation/native';
 import { DataBase } from '../../Database/Database';
 import Tela from './Tela';
 import GreyButton from '../Buttons/GreyButton';
-import Combobox from "react-widgets/Combobox";
 
 const BACKGROUND = '#FFFFFF'
 const TOPTAB_COLOR = '#82C57C'

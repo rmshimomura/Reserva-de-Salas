@@ -11,6 +11,8 @@ const FONT_WEIGHT = 'regular'
 
 const ReturnButton = (display) => {
 
+    const navigation = useNavigation();
+
     return display.display ? (
             <TouchableHighlight style={styles.returnButton}
                 onPress={() => navigation.goBack()}>
@@ -40,8 +42,6 @@ const NotificationButton = (display) => {
 }
 
 const Tela = (props) => {
-
-    const navigation = useNavigation();
 
     return (
         <View style={styles.container}>

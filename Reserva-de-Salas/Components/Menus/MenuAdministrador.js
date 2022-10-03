@@ -10,8 +10,8 @@ export default class MenuAdministrador extends Component {
         return (
             <Tela name="Menu Administrador" returnBtn={true} notificationBtn={true}>
                 <View style={styles.container}>
-                    <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Alterar permissões e informações de um usuário"/>
-                    <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Log de eventos"/>
+                    <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Alterar permissões e informações de um usuário" onPress={() => alert('Ainda não implementado!')}/>
+                    <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Log de eventos" onPress={() => alert('Ainda não implementado!')}/>
                 </View>
             </Tela>
         );

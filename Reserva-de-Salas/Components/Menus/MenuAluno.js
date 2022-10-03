@@ -9,9 +9,8 @@ export default function MenuAluno(props) {
         <Tela name="Menu Aluno" returnBtn={true} notificationBtn={true}>
             <View style={styles.container}>
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Consultar Sala" onPress={props.navigation.navigate('Consultar Sala')} />
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Fazer Requisição" onPress={props.navigation.navigate('Fazer Requisição')} />
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Minhas Requisições" onPress={props.navigation.navigate('Minhas Requisições')} />
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Sair" onPress={() => props.navigation.navigate('Login')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Fazer Requisição" onPress={() => alert('Ainda não implementado!')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Minhas Requisições" onPress={() => alert('Ainda não implementado!')} />
             </View>
         </Tela>
     )
