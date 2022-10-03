@@ -44,7 +44,7 @@ export default class TelaConsultarSala extends Component {
                     <View style={{flex: 2, backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "4%"}}>
                         <Text style={styles.text} >Sala: {this.state.classroomJSON.nome}</Text>
                         <Text style={styles.text} >Capacidade: {this.state.classroomJSON.capacidade}</Text>
-                        <GreenButton height="50%" width="20%" text="Editar" onPress={() => alert('Ainda não implementado!')} />
+                        <GreenButton buttonStyle={styles.editar} text="Editar" onPress={() => alert('Ainda não implementado!')} />
                     </View>
                     <View style={{backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "4%"}}>
                         <Text style={styles.text} >Centro: {this.state.classroomJSON.centro}</Text>
@@ -113,7 +113,6 @@ const styles = StyleSheet.create({
         borderColor: '#000',
         marginRight: "10%"
     },
-    // Make the error message red and with the same width as the input
     errorMessage: {
         backgroundColor: 'red',
         width: "63%",
@@ -129,5 +128,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#000',
         marginRight: "10%"
+    },
+    editar: {
+        width: "24%",
+        height: "100%",
+        textAlign: "center"
     }
 });
