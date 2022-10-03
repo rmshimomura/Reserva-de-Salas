@@ -8,7 +8,7 @@ import MenuProfessor from './Components/Menus/MenuProfessor';
 import MenuAluno from './Components/Menus/MenuAluno';
 import MenuCoordenacao from './Components/Menus/MenuCoordenacao';
 import MenuAdministrador from './Components/Menus/MenuAdministrador';
-import TelaConsultarSala from './Components/Telas/TelaConsultarSala';
+import CadastrarSala from './Components/Telas/CadastrarSala';
 
 const Stack = createStackNavigator()
 
@@ -34,8 +34,8 @@ export default function App() {
         <Stack.Screen name="Menu admin" options={{headerShown: false}}>
           {props => <MenuAdministrador {...props} />}
         </Stack.Screen>
-        <Stack.Screen name="Consultar Sala" options={{headerShown: false}}>
-          {props => <TelaConsultarSala {...props} />}
+        <Stack.Screen name="Cadastrar sala" options={{headerShown: false}}>
+          {props => <CadastrarSala {...props} />}
         </Stack.Screen>
       </Stack.Navigator>
   </NavigationContainer>
