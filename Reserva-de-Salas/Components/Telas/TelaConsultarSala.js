@@ -27,8 +27,8 @@ export default class TelaConsultarSala extends Component {
     error() {
         if(this.state.classroom === 0){
             return (
-                <View>
-                    <Text style={styles.text}> NAO ENCONTROU A SALA </Text>
+                <View style={styles.errorMessage}>
+                    <Text style={styles.text}> Sala não encontrada! </Text>
                 </View>
             )
         }
@@ -39,8 +39,8 @@ export default class TelaConsultarSala extends Component {
     renderClassroom() {
         if(this.state.classroom === 1){
             return (
-                <View>
-                    <Text style={styles.text}> ACHOU A SALA </Text>
+                <View style={styles.successMessage}>
+                    <Text style={styles.text}> Sala encontrada! </Text>
                 </View>
             )
         }
@@ -56,7 +56,7 @@ export default class TelaConsultarSala extends Component {
                     <Text style={styles.text}>Sala:</Text>
                     <View style={styles.rowView}>
                         <TextInput style={styles.input} placeholder="Digite o nome da sala..." onChangeText={classroomName => this.setState({ classroomName })} />
-                        <GreenButton height="4.5%" width="10%" text="Consultar" onPress={() => this.changeClassoomStatus()} />
+                        <GreenButton height="50%" width="20%" text="Consultar" onPress={() => this.changeClassoomStatus()} />
                     </View>
                     <View>
                         {this.error()}
@@ -72,7 +72,7 @@ export default class TelaConsultarSala extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 2,
         backgroundColor: '#fff',
         alignItems: 'left',
         justifyContent: 'top',
@@ -98,4 +98,21 @@ const styles = StyleSheet.create({
         borderColor: '#000',
         marginRight: "10%"
     },
+    // Make the error message red and with the same width as the input
+    errorMessage: {
+        backgroundColor: 'red',
+        width: "63%",
+        height: 40,
+        borderWidth: 1,
+        borderColor: '#000',
+        marginRight: "10%"
+    },
+    successMessage: {
+        backgroundColor: 'green',
+        width: "63%",
+        height: 40,
+        borderWidth: 1,
+        borderColor: '#000',
+        marginRight: "10%"
+    }
 });
