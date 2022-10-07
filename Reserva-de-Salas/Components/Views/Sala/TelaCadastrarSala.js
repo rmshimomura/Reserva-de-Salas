@@ -1,16 +1,11 @@
 import react, { Component } from 'react'
 import { View, Text, StyleSheet, TouchableHighlight, TextInput, Picker} from 'react-native'
-import { DataBase } from '../../Database/Database';
-import Tela from './Tela';
-import GreyButton from '../Buttons/GreyButton';
+import { DataBase } from '../../../Database/Database';
+import TelaBase from '../Gerais/TelaBase';
+import GreyButton from '../../Buttons/GreyButton'
+;
 
-const BACKGROUND = '#FFFFFF'
-const TOPTAB_COLOR = '#82C57C'
-const TEXT_COLOR = '#000000'
-const FONT_SIZE = 20
-const FONT_WEIGHT = 'regular'
-
-export default class CadastrarSala extends Component{
+export default class TelaCadastrarSala extends Component{
 
     state = {
         wasCreated: false,
@@ -53,7 +48,7 @@ export default class CadastrarSala extends Component{
 
     render() {
         return (
-            <Tela name="CADASTRAR SALA" returnBtn={ true } notificationBtn={ true }>
+            <TelaBase name="CADASTRAR SALA" returnBtn={ true } notificationBtn={ true }>
                 <View style={styles.rowStyle}>
                     <View style={styles.topSubdiv}>
                         <Text style={styles.text}>Centro:</Text>
@@ -117,7 +112,7 @@ export default class CadastrarSala extends Component{
 
                 <GreyButton width={"20%"} height={"10%"} buttonStyle={{marginTop: 100}} text="Cadastrar" onPress={() => this.insertClassroomToDB()}/>
                 
-            </Tela>
+            </TelaBase>
         );
     }
 

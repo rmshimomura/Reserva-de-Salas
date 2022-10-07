@@ -2,14 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
-import Login from './Components/Menus/Login';
-import MenuSecretaria from './Components/Menus/MenuSecretaria';
-import MenuProfessor from './Components/Menus/MenuProfessor';
-import MenuAluno from './Components/Menus/MenuAluno';
-import MenuCoordenacao from './Components/Menus/MenuCoordenacao';
-import MenuAdministrador from './Components/Menus/MenuAdministrador';
-import CadastrarSala from './Components/Telas/CadastrarSala';
-import TelaConsultarSala from './Components/Telas/TelaConsultarSala';
+import TelaLogin from './Components/Views/Gerais/TelaLogin'
+import TelaAdministrador from './Components/Views/Gerais/TelaAdministrador'
+import TelaSecretaria from './Components/Views/Gerais/TelaSecretaria'
+import TelaProfessor from './Components/Views/Gerais/TelaProfessor'
+import TelaAluno from './Components/Views/Gerais/TelaAluno'
+import TelaCadastrarSala from './Components/Views/Sala/TelaCadastrarSala'
+import TelaConsultarSala from './Components/Views/Sala/TelaConsultarSala'
 const Stack = createStackNavigator()
 
 export default function App() {
@@ -17,25 +16,25 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Login" options={{headerShown: false}}>
-          {props => <Login {...props} />}
+          {props => <TelaLogin {...props} />}
         </Stack.Screen>
         <Stack.Screen name="Menu secretaria" options={{headerShown: false}}>
-          {props => <MenuSecretaria {...props} />}
+          {props => <TelaSecretaria {...props} />}
         </Stack.Screen>
         <Stack.Screen name="Menu professor" options={{headerShown: false}}>
-          {props => <MenuProfessor {...props} />}
+          {props => <TelaProfessor {...props} />}
         </Stack.Screen>
         <Stack.Screen name="Menu aluno" options={{headerShown: false}}>
-          {props => <MenuAluno {...props} />}
+          {props => <TelaAluno {...props} />}
         </Stack.Screen>
         <Stack.Screen name="Menu coordenador" options={{headerShown: false}}>
-          {props => <MenuCoordenacao {...props} />}
+          {props => <TelaCoordenacao {...props} />}
         </Stack.Screen>
         <Stack.Screen name="Menu admin" options={{headerShown: false}}>
-          {props => <MenuAdministrador {...props} />}
+          {props => <TelaAdministrador {...props} />}
         </Stack.Screen>
         <Stack.Screen name="Cadastrar sala" options={{headerShown: false}}>
-          {props => <CadastrarSala {...props} />}
+          {props => <TelaCadastrarSala {...props} />}
         </Stack.Screen>
         <Stack.Screen name="Consultar Sala" options={{headerShown: false}}>
           {props => <TelaConsultarSala {...props} />}

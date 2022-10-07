@@ -1,9 +1,8 @@
-import react, { Component } from 'react'
-import { StyleSheet, Text, View, Buttonm, TextInput } from 'react-native';
-import Tela from '../Telas/Tela'
-import { DataBase } from '../../Database/Database';
-import GreyButton from '../Buttons/GreyButton'
-import GreenButton from '../Buttons/GreenButton'
+import { StyleSheet, Text, View, TextInput } from 'react-native';
+import TelaBase from '../Gerais/TelaBase'
+import GreenButton from '../../Buttons/GreenButton'
+import { Component } from 'react';
+import { DataBase } from '../../../Database/Database'
 
 export default class TelaConsultarSala extends Component {
 
@@ -65,7 +64,7 @@ export default class TelaConsultarSala extends Component {
     render () {
 
         return (
-            <Tela name="Consultar Sala" returnBtn="true" notificationBtn="true">
+            <TelaBase name="Consultar Sala" returnBtn="true" notificationBtn="true">
                 <View style={styles.container}>
                     <Text style={styles.text}>Sala:</Text>
                     <View style={styles.rowView}>
@@ -79,7 +78,7 @@ export default class TelaConsultarSala extends Component {
                         {this.renderClassroom()}
                     </View>
                  </View>
-            </Tela>
+            </TelaBase>
         )
     }
 }

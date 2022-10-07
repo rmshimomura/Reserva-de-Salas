@@ -1,14 +1,15 @@
-import react, { Component } from 'react'
+import { Component } from 'react'
 
 import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 
-import { DataBase } from '../../Database/Database'
+import { DataBase } from '../../../Database/Database'
 
-import Tela from '../Telas/Tela'
+import TelaBase from './TelaBase'
 
-import GreyButton from '../Buttons/GreyButton'
+import GreyButton from '../../Buttons/GreyButton'
 
-export default class Login extends Component {
+
+export default class TelaLogin extends Component {
 
     state = {
         login: '',
@@ -51,7 +52,7 @@ export default class Login extends Component {
     render() {
 
         return (
-            <Tela name="SISTEMA PARA RESERVA DE SALAS" returnBtn={false} notificationBtn={false}>
+            <TelaBase name="SISTEMA PARA RESERVA DE SALAS" returnBtn={false} notificationBtn={false}>
                 <View style={styles.container}>
                     <Text style={styles.text}>Usuário:</Text>
                     <TextInput style={styles.input} placeholder="Digite seu usuário ou email..." onChangeText={login => this.setState({ login })} />
@@ -59,7 +60,7 @@ export default class Login extends Component {
                     <TextInput secureTextEntry style={styles.input} placeholder="Digite sua senha aqui..." onChangeText={hash => this.setState({ hash })} />
                 </View>
                 <GreyButton text="Entrar" width={300} height={80} buttonStyle={{ position: 'relative' }} onPress={this.entrar} />
-            </Tela>
+            </TelaBase>
         );
     }
 

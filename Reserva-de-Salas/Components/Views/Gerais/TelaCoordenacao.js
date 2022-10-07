@@ -1,21 +1,19 @@
-import react from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native';
-import Tela from '../Telas/Tela'
+import TelaBase from './TelaBase'
 
-import GreyButton from '../Buttons/GreyButton'
-import GreenButton from '../Buttons/GreenButton'
+import GreyButton from '../../Buttons/GreyButton'
 
-export default function MenuCoordenacao(props) {
+export default function TelaCoordenacao(props) {
 
     return (
-        <Tela name="Menu coordenação" returnBtn={true} notificationBtn={true}>
+        <TelaBase name="Menu coordenação" returnBtn={true} notificationBtn={true}>
             <View style={styles.container}>
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Agendar Sala" onPress={() => alert('Ainda não implementado!')} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Consultar Sala" onPress={() => props.navigation.navigate('Consultar Sala')} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Fazer requisição" onPress={() => alert('Ainda não implementado!')} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Procurar um(a) professor(a)" onPress={() => alert('Ainda não implementado!')} />
             </View>
-        </Tela>
+        </TelaBase>
     )
 }
 

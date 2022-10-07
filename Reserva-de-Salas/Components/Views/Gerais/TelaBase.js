@@ -41,7 +41,7 @@ const NotificationButton = (display) => {
     : null
 }
 
-const Tela = (props) => {
+const TelaBase = (props) => {
 
     return (
         <View style={styles.container}>
@@ -132,4 +132,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Tela
+export default TelaBase
