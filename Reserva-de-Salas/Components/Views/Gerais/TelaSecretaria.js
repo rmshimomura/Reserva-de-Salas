@@ -1,19 +1,19 @@
 import { StyleSheet, Text, View, Button } from 'react-native';
-import Tela from '../Telas/Tela'
+import TelaBase from './TelaBase'
 
-import GreyButton from '../Buttons/GreyButton'
+import GreyButton from '../../Buttons/GreyButton'
 
-export default function MenuSecretaria(props) {
+export default function TelaSecretaria(props) {
 
     return (
-        <Tela name="Menu secretaria" returnBtn={true} notificationBtn={true}>
+        <TelaBase name="Menu secretaria" returnBtn={true} notificationBtn={true}>
             <View style={styles.container}>
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Agendar Sala" onPress={() => alert('Ainda não implementado!')} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Cadastrar Sala" onPress={() => props.navigation.navigate('Cadastrar sala')} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Consultar sala" onPress={() => props.navigation.navigate('Consultar Sala')} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Requisições pendentes" onPress={() => alert('Ainda não implementado!')} />
             </View>
-        </Tela>
+        </TelaBase>
     )
 }
 
