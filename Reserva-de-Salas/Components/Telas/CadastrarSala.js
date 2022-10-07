@@ -4,12 +4,6 @@ import { DataBase } from '../../Database/Database';
 import Tela from './Tela';
 import GreyButton from '../Buttons/GreyButton';
 
-const BACKGROUND = '#FFFFFF'
-const TOPTAB_COLOR = '#82C57C'
-const TEXT_COLOR = '#000000'
-const FONT_SIZE = 20
-const FONT_WEIGHT = 'regular'
-
 export default class CadastrarSala extends Component{
 
     state = {

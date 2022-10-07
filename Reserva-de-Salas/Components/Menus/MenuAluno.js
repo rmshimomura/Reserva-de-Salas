@@ -1,4 +1,3 @@
-import react from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native';
 import Tela from '../Telas/Tela';
 import GreyButton from '../Buttons/GreyButton';
