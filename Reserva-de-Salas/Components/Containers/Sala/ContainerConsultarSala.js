@@ -1,5 +1,4 @@
-import react from "react";
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import TelaConsultarSala from '../../Views/Sala/TelaConsultarSala'
 import GreenButton from '../../Buttons/GreenButton'
 import { Component } from 'react';
@@ -52,7 +51,7 @@ export default class ContainerConsultarSala extends Component {
                         <Text style={styles.text} >Centro: {this.state.classroomJSON.centro}</Text>
                     </View>
                     <View style={{backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "4%"}}>
-                        <Text style={styles.text} >Equipamentos: {this.state.classroomJSON.estrutura + "."}</Text>
+                        <Text style={styles.text} >Equipamentos: {this.state.classroomJSON.estrutura}</Text>
                     </View>
                     <View style={{backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "4%"}}>
                         <Text style={styles.text} >Localização: UEL</Text>
