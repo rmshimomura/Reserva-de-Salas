@@ -3,6 +3,9 @@ export class DataBase {
     static classroomsDB = require('./Classroom/Classrooms.json'); 
     static loginDB = require('./Login/Users.json'); 
     static deptDB = require('./Department/Department.json'); 
+    static structureDB = require('./Structure/Structure.json');
+    static accessibilityDB = require('./Accessibility/Accessibility.json');
+    static roomTypeDB = require('./RoomType/RoomType.json');
     
     constructor(){}
 
@@ -12,6 +15,18 @@ export class DataBase {
 
     static searchUsername(name){
         return this.loginDB.users.find((user) => user.name === name);
+    }
+
+    static searchRoomType(){
+        return this.roomTypeDB.roomTypes;
+    }
+
+    static searchAccessibility(){
+        return this.accessibilityDB.accessibilities;
+    }
+
+    static searchStructure(){
+        return this.structureDB.structures;
     }
 
     static insertClassroom(Centro, Depto, Cap, Nome, Acess, Tipo, Est) { 
