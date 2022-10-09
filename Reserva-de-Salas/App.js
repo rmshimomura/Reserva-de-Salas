@@ -8,7 +8,7 @@ import TelaSecretaria from './Components/Views/Gerais/TelaSecretaria'
 import TelaProfessor from './Components/Views/Gerais/TelaProfessor'
 import TelaAluno from './Components/Views/Gerais/TelaAluno'
 import TelaCadastrarSala from './Components/Views/Sala/TelaCadastrarSala'
-import TelaConsultarSala from './Components/Views/Sala/TelaConsultarSala'
+import ContainerConsultarSala from './Components/Containers/Sala/ContainerConsultarSala';
 const Stack = createStackNavigator()
 
 export default function App() {
@@ -37,7 +37,7 @@ export default function App() {
           {props => <TelaCadastrarSala {...props} />}
         </Stack.Screen>
         <Stack.Screen name="Consultar Sala" options={{headerShown: false}}>
-          {props => <TelaConsultarSala {...props} />}
+          {props => <ContainerConsultarSala {...props} />}
         </Stack.Screen>
       </Stack.Navigator>
   </NavigationContainer>
