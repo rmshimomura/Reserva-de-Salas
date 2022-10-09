@@ -13,6 +13,10 @@ export class DataBase {
         return this.deptDB.centros.find((centr) => centr.centro === center);
     }
 
+    static searchAllDeptos(){
+        return this.deptDB.centros.map((centro) => centro.centro);
+    }
+
     static searchUsername(name){
         return this.loginDB.users.find((user) => user.name === name);
     }
