@@ -55,9 +55,9 @@ export default class TelaLogin extends Component {
             <TelaBase name="SISTEMA PARA RESERVA DE SALAS" returnBtn={false} notificationBtn={false}>
                 <View style={styles.container}>
                     <Text style={styles.text}>Usuário:</Text>
-                    <TextInput style={styles.input} placeholder="Digite seu usuário ou email..." onChangeText={login => this.setState({ login })} />
+                    <TextInput style={this.state.login ? [styles.input, styles.normal_text] : [styles.input, styles.placeholer_text]} placeholder="Digite seu usuário ou email..." onChangeText={login => this.setState({ login })} />
                     <Text style={styles.text}>Senha:</Text>
-                    <TextInput secureTextEntry style={styles.input} placeholder="Digite sua senha aqui..." onChangeText={hash => this.setState({ hash })} />
+                    <TextInput secureTextEntry style={this.state.login ? [styles.input, styles.normal_text] : [styles.input, styles.placeholer_text]} placeholder="Digite sua senha aqui..." onChangeText={hash => this.setState({ hash })} />
                 </View>
                 <GreyButton text="Entrar" width={300} height={80} buttonStyle={{ position: 'relative' }} onPress={this.entrar} />
             </TelaBase>
@@ -87,7 +87,12 @@ const styles = StyleSheet.create({
         padding: 10,
         fontSize: 24,
         fontWeight: 'normal',
+    },
+    placeholer_text: {
         color: '#A1A1A1'
     },
+    normal_text: {
+        color: '#000'
+    }
 
 });
