@@ -1,6 +1,3 @@
-import React from "react";
-import User from './Login/Users.json'
-
 export class DataBase {
     
     static classroomsDB = require('./Classroom/Classrooms.json'); 
