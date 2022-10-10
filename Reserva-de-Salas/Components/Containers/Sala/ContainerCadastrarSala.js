@@ -98,7 +98,7 @@ export default class ContainerCadastrarSala extends Component {
     }
 
     fetchCentersList () {
-        const centers = DataBase.searchAllDeptos()
+        const centers = DataBase.searchAllCenters()
         if (centers != null) {
             let final_result = []
             final_result.push(<Picker.Item label={"Selecione um centro"} value={null} key={0}/>)
