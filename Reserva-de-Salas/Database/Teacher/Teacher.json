@@ -1,0 +1,32 @@
+{
+    "teachers": [
+        {
+            "nome": "FABIO SAKURAY",
+            "sala": "306A",
+            "centro": "CCE",
+            "disciplinas": [
+                {
+                    "disc_codigo": "1COP010",
+                    "disc_semana_dia": "Segunda-Feira",
+                    "disc_horario_ini": "8:20",
+                    "disc_horario_fin": "9:10",
+                    "disc_sala": "LAB 19"
+                }
+            ]
+        },
+        {
+            "nome": "WESLEY ATTROT",
+            "sala": "301A",
+            "centro": "CCE",
+            "disciplinas": [
+                {
+                    "disc_codigo": "1COP017",
+                    "disc_semana_dia": "Segunda-Feira",
+                    "disc_horario_ini": "8:20",
+                    "disc_horario_fin": "9:10",
+                    "disc_sala": "LAB 21"
+                }
+            ]
+        }
+    ]
+}
