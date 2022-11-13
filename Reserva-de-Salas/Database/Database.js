@@ -51,4 +51,8 @@ export class DataBase {
         return this.classroomsDB.classrooms.find((classroom) => classroom.nome === name);
     }
 
+    static searchTeacher(name) {
+        
+    }
+
 }
