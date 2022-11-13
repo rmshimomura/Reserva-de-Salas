@@ -6,6 +6,7 @@ export class DataBase {
     static structureDB = require('./Structure/Structure.json');
     static accessibilityDB = require('./Accessibility/Accessibility.json');
     static roomTypeDB = require('./RoomType/RoomType.json');
+    static teacherDB = require('./Teacher/Teacher.json');
     
     constructor(){}
 
@@ -52,7 +53,16 @@ export class DataBase {
     }
 
     static searchTeacher(name) {
-        
+        return this.teacherDB.teachers.find((teacher) => teacher.nome === name);
+    }
+
+    static updateClassroom(oldName, classroomObject) {
+        this.classroomsDB = this.classroomsDB.map(classroom => {
+            if (classroom.nome === oldName) {
+                return classroomObject;
+            }
+            return classroom;
+        });
     }
 
 }
