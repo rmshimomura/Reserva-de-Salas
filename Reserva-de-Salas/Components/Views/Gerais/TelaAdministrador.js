@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-        width: "90%"
+        width: "90%",
+        margin: 128
     },
     text: {
         fontSize: 30,

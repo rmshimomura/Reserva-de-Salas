@@ -12,6 +12,10 @@ export default function TelaSecretaria(props) {
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Cadastrar Sala" onPress={() => props.navigation.navigate('Cadastrar sala')} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Consultar sala" onPress={() => props.navigation.navigate('Consultar Sala')} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Requisições pendentes" onPress={() => alert('Ainda não implementado!')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Visualizar horários de centro" onPress={() => alert('Ainda não implementado!')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Histórico de requisições" onPress={() => alert('Ainda não implementado!')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Procurar um professor" onPress={() => alert('Sendo implementado...')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Importar grade" onPress={() => alert('Ainda não implementado!')} />
             </View>
         </TelaBase>
     )
@@ -23,7 +27,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-        width: "90%"
+        width: "90%",
+        margin: 128
     },
     text: {
         fontSize: 30,
