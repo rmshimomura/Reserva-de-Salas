@@ -7,6 +7,7 @@ import TelaAdministrador from './Components/Views/Gerais/TelaAdministrador'
 import TelaSecretaria from './Components/Views/Gerais/TelaSecretaria'
 import TelaProfessor from './Components/Views/Gerais/TelaProfessor'
 import TelaAluno from './Components/Views/Gerais/TelaAluno'
+import TelaCoordenacao from './Components/Views/Gerais/TelaCoordenacao'
 import ContainerCadastrarSala from './Components/Containers/Sala/ContainerCadastrarSala'
 import ContainerConsultarSala from './Components/Containers/Sala/ContainerConsultarSala';
 const Stack = createStackNavigator()
