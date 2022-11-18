@@ -11,7 +11,7 @@ export default function TelaCoordenacao(props) {
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Agendar Sala" onPress={() => alert('Ainda não implementado!')} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Consultar Sala" onPress={() => props.navigation.navigate('Consultar Sala')} />
                 <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Fazer requisição" onPress={() => alert('Ainda não implementado!')} />
-                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Procurar um(a) professor(a)" onPress={() => alert('Ainda não implementado!')} />
+                <GreyButton buttonStyle={styles.button} height="80" width="100%" text="Procurar um(a) professor(a)" onPress={() => props.navigation.navigate('Procurar Professor')} />
             </View>
         </TelaBase>
     )
