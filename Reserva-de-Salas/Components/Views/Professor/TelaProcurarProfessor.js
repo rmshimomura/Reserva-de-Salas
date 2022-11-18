@@ -2,21 +2,21 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 import TelaBase from '../Gerais/TelaBase'
 import GreenButton from '../../Buttons/GreenButton'
 
-const TelaConsultarSala = ({renderClassroom, changeClassoomStatus, changeClassroomName, errorScreen}) => {
+const TelaConsultarSala = ({renderProfessor, changeProfessorStatus, changeProfessorName, errorScreen}) => {
     
     return (
         <TelaBase name="Procurar um(a) Professor(a)" returnBtn="true" notificationBtn="true">
             <View style={styles.container}>
-                <Text style={styles.text}>Sala:</Text>
+                <Text style={styles.text}>Professor(a):</Text>
                 <View style={styles.rowView}>
-                    <TextInput style={styles.input} placeholder="Digite o nome da sala..." onChangeText={(classroomName) => changeClassroomName(classroomName)} />
-                    <GreenButton height="50%" width="20%" text="Consultar" onPress={() => changeClassoomStatus()} />
+                    <TextInput style={styles.input} placeholder="Digite o nome do(a) professor(a)..." onChangeText={(classroomName) => changeProfessorName(classroomName)} />
+                    <GreenButton height="50%" width="20%" text="Consultar" onPress={() => changeProfessorStatus()} />
                 </View>
                 <View>
                     {errorScreen()}
                 </View>
                 <View>
-                    {renderClassroom()}
+                    {renderProfessor()}
                 </View>
             </View>
         </TelaBase>

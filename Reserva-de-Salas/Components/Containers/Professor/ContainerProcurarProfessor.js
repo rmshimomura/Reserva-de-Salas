@@ -16,6 +16,16 @@ export default class ContainerProcurarProfessor extends Component {
         this.setState({professorName: text})
     }
     
+    changeProfessorStatus() {
+        const __professorJSON = DataBase.searchTeacher(this.state.professorName)
+        if (__professorJSON == null) {
+            this.setState({professor : 0})
+        }else {
+            this.setState({professor : 1})
+        }
+        this.setState({professorJSON : __professorJSON})
+    }
+
     error() {
         if(this.state.professor === 0){
             return (
