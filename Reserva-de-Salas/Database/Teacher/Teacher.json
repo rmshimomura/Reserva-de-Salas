@@ -4,29 +4,27 @@
             "nome": "FABIO SAKURAY",
             "sala": "306A",
             "centro": "CCE",
-            "disciplinas": [
-                {
-                    "disc_codigo": "1COP010",
-                    "disc_semana_dia": "Segunda-Feira",
-                    "disc_horario_ini": "8:20",
-                    "disc_horario_fin": "9:10",
-                    "disc_sala": "LAB 19"
+            "disciplinas": {
+                "segunda_feira": {
+                    "1": "1COP010 - LAB 19"
+                },
+                "terca_feira": {
+                    "1": "1COP010 - LAB 20"
                 }
-            ]
+            }
         },
         {
-            "nome": "WESLEY ATTROT",
+            "nome": "WESLEY ATROPODE",
             "sala": "301A",
             "centro": "CCE",
-            "disciplinas": [
-                {
-                    "disc_codigo": "1COP017",
-                    "disc_semana_dia": "Segunda-Feira",
-                    "disc_horario_ini": "8:20",
-                    "disc_horario_fin": "9:10",
-                    "disc_sala": "LAB 21"
+            "disciplinas": {
+                "segunda_feira": {
+                    "1": "1COP017 - LAB 21"
+                },
+                "terca_feira": {
+                    "4": "1COP010 - LAB 20"
                 }
-            ]
+            }
         }
     ]
 }
