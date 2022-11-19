@@ -9,7 +9,7 @@ export default class ContainerConsultarSala extends Component {
     state = {
         classroom : -1,
         classroomName: '',
-        classroomJSON: null,
+        classroomJSON: '',
     }
 
     changeClassroomName = (text) => {
@@ -18,9 +18,8 @@ export default class ContainerConsultarSala extends Component {
 
     changeClassoomStatus() {
         const __classroomJSON = DataBase.searchClassroom(this.state.classroomName)
-        if (__classroomJSON == null) {
-            this.setState({classroom : 0})
-        }else {
+        this.setState({classroom : 0})
+        if (__classroomJSON != null) {
             this.setState({classroom : 1})
         }
         this.setState({classroomJSON : __classroomJSON})
@@ -45,7 +44,7 @@ export default class ContainerConsultarSala extends Component {
                     <View style={{flex: 2, backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "4%"}}>
                         <Text style={styles.text} >Sala: {this.state.classroomJSON.nome}</Text>
                         <Text style={styles.text} >Capacidade: {this.state.classroomJSON.capacidade}</Text>
-                        <GreenButton buttonStyle={styles.editar} text="Editar" onPress={() => alert('Ainda não implementado!')} />
+                        <GreenButton buttonStyle={styles.editar} text="Editar" onPress={() => this.props.navigation.navigate('Editar Sala')} />
                     </View>
                     <View style={{backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "4%"}}>
                         <Text style={styles.text} >Centro: {this.state.classroomJSON.centro}</Text>

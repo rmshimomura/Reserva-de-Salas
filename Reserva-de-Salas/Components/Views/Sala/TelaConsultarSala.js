@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native'
 import TelaBase from '../Gerais/TelaBase'
 import GreenButton from '../../Buttons/GreenButton'
 
