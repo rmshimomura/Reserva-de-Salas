@@ -22,8 +22,8 @@ export default class ContainerConsultarSala extends Component {
             this.setState({classroom : 0})
         }else {
             this.setState({classroom : 1})
+            this.setState({classroomJSON : __classroomJSON})
         }
-        this.setState({classroomJSON : __classroomJSON})
     }
     
     error() {
@@ -39,7 +39,7 @@ export default class ContainerConsultarSala extends Component {
     }
 
     renderClassroom() {
-        if(this.state.classroom === 1){
+        if(this.state.classroom === 1 && this.state.classroomJSON != null){
 
             console.log(this.state.classroomJSON.estrutura)
 
