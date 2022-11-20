@@ -57,12 +57,16 @@ export class DataBase {
     }
 
     static updateClassroom(oldName, classroomObject) {
-        this.classroomsDB = this.classroomsDB.map(classroom => {
+        this.classroomsDB.classrooms = this.classroomsDB.classrooms.map((classroom) => {
             if (classroom.nome === oldName) {
                 return classroomObject;
             }
             return classroom;
         });
+    }
+
+    static removeClassroom(name) {
+        this.classroomsDB.classrooms = this.classroomsDB.classrooms.filter((classroom) => classroom.nome !== name);
     }
 
 }

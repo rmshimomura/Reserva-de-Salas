@@ -43,6 +43,8 @@ export default class ContainerConsultarSala extends Component {
 
             console.log(this.state.classroomJSON.estrutura)
 
+            window.nomeSala = this.state.classroomJSON.nome
+
             return (
                 <View>
                     <View style={{flex: 2, backgroundColor: '#fff', width: "90%", height: "10%", flexDirection: "row", marginBottom: "4%"}}>

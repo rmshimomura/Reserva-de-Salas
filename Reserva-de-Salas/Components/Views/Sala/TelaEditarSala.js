@@ -3,24 +3,15 @@ import { StyleSheet, Text, View, TextInput, CheckBox, Button, TouchableOpacity }
 import TelaBase from '../Gerais/TelaBase'
 import GreenButton from '../../Buttons/GreenButton'
 import DropDownPicker from 'react-native-dropdown-picker'
+import { DataBase } from "../../../Database/Database";
 
-const TelaEditarSala = ({renderClassroom, changeClassoomStatus, changeClassroomName, errorScreen}) => {
-    const [isSelected, setSelection] = useState(false);
-    const [isSelected2, setSelection2] = useState(false);
-    const [isSelected3, setSelection3] = useState(false);
-    const [isSelected4, setSelection4] = useState(false);
+const TelaEditarSala = ({ updateCapacity, updateName, updateCentro, updateDepto, updateAccess, updateTelevisao, updateProjetor, updateComputadores, getTelevisao, getProjetor, getComputadores, getAccess, updateClassroomToDB, fetchCentersList, fetchDepartmentsList, removeClassroomToDB}) => {
     const [open, setOpen] = useState(false);
     const [open2, setOpen2] = useState(false);
     const [value, setValue] = useState(null);
     const [value2, setValue2] = useState(null);
-    const [items, setItems] = useState([
-        {label: 'Apple', value: 'apple'},
-        {label: 'Banana', value: 'banana'}
-    ]); //puxar essas constantes do banco de dados
-    const [items2, setItems2] = useState([
-        {label: 'Apple', value: 'apple'},
-        {label: 'Banana', value: 'banana'}
-    ]); //puxar essas constantes do banco de dados
+    const [items, setItems] = useState(fetchCentersList ());
+    const [items2, setItems2] = useState(fetchDepartmentsList());
 
     return (
         <TelaBase name="Editar Sala" returnBtn="true" notificationBtn="true">
@@ -28,69 +19,72 @@ const TelaEditarSala = ({renderClassroom, changeClassoomStatus, changeClassroomN
             <View style={styles.container}>
                 <Text style={styles.text}>Centro</Text>
                 <View style={styles.dropdown}>
-                    <DropDownPicker //drop down para selecionar o centro
+                    <DropDownPicker
                         open={open}
                         value={value}
                         items={items}
                         setOpen={setOpen}
                         setValue={setValue}
                         setItems={setItems}
+                        onChangeValue={(value) => updateCentro(value)}
                         />
                 </View>
             </View>
             <View style={styles.container}>
                 <Text style={styles.text}>Departamento</Text>
                 <View style={styles.dropdown}>
-                    <DropDownPicker //drop down para selecionar o centro
+                    <DropDownPicker
                         open={open2}
                         value={value2}
-                        items={items2}
+                        items={fetchDepartmentsList()}
                         setOpen={setOpen2}
                         setValue={setValue2}
                         setItems={setItems2}
+                        onChangeValue={(value) => updateDepto(value)}
                         />
                 </View>
             </View>
             <View style={styles.container}>
                 <Text style={styles.text}>Capacidade</Text>
-                <TextInput style={styles.input} placeholder="Capacidade" onChangeText={changeClassroomName} />
+                <TextInput style={styles.input} placeholder={DataBase.searchClassroom(window.nomeSala) ? DataBase.searchClassroom(window.nomeSala).capacidade : ""} onChangeText={(capacity) => updateCapacity(capacity)} />
             </View>
         </View>
         <View style={styles.rowView}>
             <View style={styles.container2}>
                 <Text style={styles.text}>Nome</Text>
-                <TextInput style={styles.input} placeholder="Nome" onChangeText={changeClassroomName} />
+                {/* inicia com window.nomeSala */}
+                <TextInput style={styles.input}  placeholder={window.nomeSala} onChangeText={ (name) => updateName(name)} ></TextInput>
             </View>
             <CheckBox
-                value={isSelected}
-                onValueChange={setSelection}
+                value={getAccess()}
+                onValueChange={( newValue ) => updateAccess( newValue )}
                 style={styles.checkbox}
             />
             <Text style={styles.label}>Acessibilidade</Text>
             <CheckBox
-                value={isSelected2}
-                onValueChange={setSelection2}
+                value={getTelevisao()}
+                onValueChange={( newValue ) => updateTelevisao( newValue )}
                 style={styles.checkbox}
             />
             <Text style={styles.label}>Televisão</Text>
             <CheckBox
-                value={isSelected3}
-                onValueChange={setSelection3}
+                value={getProjetor()}
+                onValueChange={ ( newValue ) => updateProjetor( newValue )}
                 style={styles.checkbox}
             />
             <Text style={styles.label}>Projetor</Text>
             <CheckBox
-                value={isSelected4}
-                onValueChange={setSelection4}
+                value={ getComputadores() }
+                onValueChange={ ( newValue ) => updateComputadores( newValue )}
                 style={styles.checkbox}
             />
             <Text style={styles.label}>Computadores</Text>
         </View>
         <View style={styles.rowView}>
-            <TouchableOpacity onPress={() => alert('Sala alterada!')} style={styles.button1}>
+            <TouchableOpacity onPress={( ) => updateClassroomToDB()} style={styles.button1}>
                 <Text style={styles.text}>Editar</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => alert('Sala removida!')} style={styles.button2}>
+            <TouchableOpacity onPress={() => removeClassroomToDB()} style={styles.button2}>
                 <Text style={styles.text}>Remover</Text>
             </TouchableOpacity>
         </View>
