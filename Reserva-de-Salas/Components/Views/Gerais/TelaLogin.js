@@ -1,6 +1,6 @@
 import { Component } from 'react'
 
-import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Alert } from 'react-native';
 
 import { DataBase } from '../../../Database/Database'
 

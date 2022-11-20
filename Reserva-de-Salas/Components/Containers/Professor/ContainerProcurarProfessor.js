@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
 import TelaProcurarProfessor from '../../Views/Professor/TelaProcurarProfessor'
-import GreenButton from '../../Buttons/GreenButton'
 import { Component } from 'react';
 import { DataBase } from '../../../Database/Database'
 import { DataTable } from 'react-native-paper';

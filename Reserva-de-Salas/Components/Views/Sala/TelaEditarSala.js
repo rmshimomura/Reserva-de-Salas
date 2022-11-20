@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TextInput, CheckBox, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, CheckBox, TouchableOpacity } from 'react-native';
 import TelaBase from '../Gerais/TelaBase'
-import GreenButton from '../../Buttons/GreenButton'
 import DropDownPicker from 'react-native-dropdown-picker'
 import { DataBase } from "../../../Database/Database";
 
@@ -88,7 +87,6 @@ const TelaEditarSala = ({ updateCapacity, updateName, updateCentro, updateDepto,
                 <Text style={styles.text}>Remover</Text>
             </TouchableOpacity>
         </View>
-        {/* <Text>Is CheckBox selected: {isSelected ? "👍" : "👎"}</Text> */}
     </TelaBase>
     );
 }

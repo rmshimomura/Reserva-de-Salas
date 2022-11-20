@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import TelaBase from './TelaBase'
 import GreyButton from '../../Buttons/GreyButton'
 

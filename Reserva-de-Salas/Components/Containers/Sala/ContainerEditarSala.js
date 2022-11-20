@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
 import TelaEditarSala from '../../Views/Sala/TelaEditarSala'
-import GreenButton from '../../Buttons/GreenButton'
 import { Component } from 'react';
 import { DataBase } from '../../../Database/Database'
 

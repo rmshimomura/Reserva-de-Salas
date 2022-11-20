@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableHighlight, TextInput, Picker } from 'react-native'
+import { View, Text, StyleSheet, TextInput, Picker } from 'react-native'
 import TelaBase from '../Gerais/TelaBase';
 import GreyButton from '../../Buttons/GreyButton'
 
