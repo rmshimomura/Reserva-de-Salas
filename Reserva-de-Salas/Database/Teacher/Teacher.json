@@ -25,6 +25,30 @@
                     "4": "1COP010 - LAB 20"
                 }
             }
+        },
+        {
+            "nome": "JANDIRA PALMA",
+            "sala": "302A",
+            "centro": "CCE",
+            "disciplinas": {
+                "segunda_feira": {
+                    "3": "1COP022 - 303A",
+                    "4": "1COP022 - 303A"
+                }
+            }
+        },
+        {
+            "nome": "DANIEL KASTER",
+            "sala": "302A",
+            "centro": "CCE",
+            "disciplinas": {
+                "terca_feira": {
+                    "2": "1COP017 - 0304"
+                },
+                "quarta_feira": {
+                    "2": "1COP017 - 0304"
+                }
+            }
         }
     ]
 }

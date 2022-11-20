@@ -48,6 +48,7 @@ export default class ContainerEditarSala extends Component {
 
         DataBase.updateClassroom(window.nomeSala, classroom)
         window.nomeSala = this.state.name
+        this.props.navigation.navigate('Menu secretaria')
     }
 
     updateCapacity (capacity) {
