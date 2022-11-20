@@ -39,9 +39,8 @@ export default class ContainerConsultarSala extends Component {
     }
 
     renderClassroom() {
+        
         if(this.state.classroom === 1 && this.state.classroomJSON != null){
-
-            console.log(this.state.classroomJSON.estrutura)
 
             window.nomeSala = this.state.classroomJSON.nome
 

@@ -51,10 +51,6 @@ export default class ContainerEditarSala extends Component {
         window.nomeSala = this.state.name
     }
 
-    removeClassroomToDB() {
-        DataBase.removeClassroom(window.nomeSala)
-    }
-
     updateCapacity (capacity) {
         this.setState({capacity})
     }
@@ -135,12 +131,13 @@ export default class ContainerEditarSala extends Component {
 
     removeClassroomToDB() {
         DataBase.removeClassroom(window.nomeSala)
-        this.props.navigation.navigate('Consultar Sala')
+        this.props.navigation.navigate('Menu secretaria')
     }
 
     render() {
         return (
-            <TelaEditarSala updateClassroomToDB={() => this.updateClassroomToDB()}
+            <TelaEditarSala 
+                updateClassroomToDB={() => this.updateClassroomToDB()}
                 updateCapacity={(capacity) => this.updateCapacity(capacity)}
                 updateName={(name) => this.updateName(name)}
                 updateCentro={(value) => this.updateCentro(value)}
