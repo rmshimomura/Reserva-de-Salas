@@ -114,9 +114,14 @@ const styles = StyleSheet.create({
         alignItems: 'left',
         justifyContent: 'flex-start',
         marginRight: 100,
+        zIndex: -1,
+    },
+    checkbox: {
+        zIndex: -1,
     },
     rowView: {
         flexDirection: "row",
+        flex: 3,
     },
     text: {
         fontSize: 30,
@@ -135,6 +140,10 @@ const styles = StyleSheet.create({
         width: "70%",
         height: "100%",
         marginRight: "17%",
+        flex: 3,
+        zIndex: 3,
+        position: "relative", 
+        top : 0,
     },
     label: {
         fontSize: 15,
