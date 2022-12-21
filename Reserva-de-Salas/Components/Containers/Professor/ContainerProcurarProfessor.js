@@ -140,7 +140,6 @@ export default class ContainerProcurarProfessor extends Component {
                 </View>
             )
         }
-
     }
 
     render() {
